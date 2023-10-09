@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 50%;
+  height: 50px;
+  padding: 0 40px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+.menu {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  align-content: center;
+  justify-self: center;
+  gap: 50px;
+}
+li a {
+  position: relative;
+  text-decoration: none;
+  color: green;
+}
+li a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: 0.3s ease-out;
+}
+li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  color: blueviolet;
+}
